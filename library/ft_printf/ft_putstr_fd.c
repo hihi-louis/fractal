@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.h                                          :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tripham <tripham@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 23:27:43 by tripham           #+#    #+#             */
-/*   Updated: 2025/02/19 23:30:37 by tripham          ###   ########.fr       */
+/*   Created: 2024/11/19 19:55:01 by tripham           #+#    #+#             */
+/*   Updated: 2025/02/21 04:56:53 by tripham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACTOL_H
-# define FRACTOL_H
+#include "ft_printf.h"
 
-# include "libft.h"
-# include "../library/MLX42/include/MLX42/MLX42.h"
-# include <math.h>
-# include <string.h>
-# endif
+void	ft_putstr_fd(char *s, int fd)
+{
+	while (*s != 0)
+	{
+		write(fd, s, 1);
+		s++;
+	}
+}
