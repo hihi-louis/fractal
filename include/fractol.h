@@ -6,7 +6,7 @@
 /*   By: tripham <tripham@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 23:27:43 by tripham           #+#    #+#             */
-/*   Updated: 2025/02/22 03:58:52 by tripham          ###   ########.fr       */
+/*   Updated: 2025/02/22 15:10:39 by tripham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 # include <math.h>
 # include <string.h>
 
-# define WIDTH 1500
-# define HEIGHT 1500
+# define WIDTH 800
+# define HEIGHT 800
 
 typedef enum e_set_type
 {

@@ -6,11 +6,12 @@
 /*   By: tripham <tripham@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 01:48:12 by tripham           #+#    #+#             */
-/*   Updated: 2025/02/22 03:51:17 by tripham          ###   ########.fr       */
+/*   Updated: 2025/02/22 18:27:03 by tripham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fractol.h"
+#include <stdio.h>
 
 void	view_points(t_fractol *fractol)
 {
@@ -38,8 +39,16 @@ void	initialize_julia(t_fractol *fractol, char **argv)
 			"Example: ./fractol julia -0.4 0.6");
 		exit(EXIT_FAILURE);
 	}
-	fractol->julia_c.x = ft_atof(argv[2]);
-	fractol->julia_c.y = ft_atof(argv[3]);
+	if (ft_strlen(argv[2]) >= 5 || ft_strlen(argv[3]) >= 6)
+	{
+		fractol_error("Julia arguments are out of scope");
+		exit (EXIT_FAILURE);
+	}
+	else
+	{
+		fractol->julia_c.x = ft_atof(argv[2]);
+		fractol->julia_c.y = ft_atof(argv[3]);
+	}
 }
 
 void	initialize_fractol(t_fractol *fractol, char **argv)
@@ -67,6 +76,6 @@ void	initialize_fractol(t_fractol *fractol, char **argv)
 	mlx_image_to_window(fractol->mlx, fractol->image, 0, 0);
 	fractol_guide();
 	fractol->max_iter = 100;
-	fractol->change_rate = 0.1;
+	fractol->change_rate = 0.5;
 	view_points(fractol);
 }

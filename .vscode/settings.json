@@ -57,15 +57,15 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
-	"*.embeddedhtml": "html",
-	"cstdint": "cpp",
-	"fractol.h": "c",
-	"libft.h": "c",
-	"array": "c",
-	"compare": "c",
-	"functional": "c",
-	"tuple": "c",
-	"type_traits": "c",
-	"utility": "c"
-}
+    "*.embeddedhtml": "html",
+    "cstdint": "cpp",
+    "fractol.h": "c",
+    "libft.h": "c",
+    "array": "c",
+    "compare": "c",
+    "functional": "c",
+    "tuple": "c",
+    "type_traits": "c",
+    "utility": "c"
+  }
 }

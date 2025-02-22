@@ -6,7 +6,7 @@
 /*   By: tripham <tripham@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 14:04:41 by tripham           #+#    #+#             */
-/*   Updated: 2025/02/22 03:56:36 by tripham          ###   ########.fr       */
+/*   Updated: 2025/02/22 18:27:30 by tripham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ double	ft_atof(const char *str)
 {
 	double	result;
 	int		sign;
-	int		decimal_count;
+	double	decimal_count;
 
 	result = 0.0;
 	sign = 1;

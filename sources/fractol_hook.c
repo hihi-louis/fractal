@@ -6,7 +6,7 @@
 /*   By: tripham <tripham@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 03:18:43 by tripham           #+#    #+#             */
-/*   Updated: 2025/02/22 02:41:15 by tripham          ###   ########.fr       */
+/*   Updated: 2025/02/22 17:41:37 by tripham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,11 @@ void	fractol_ctrl(mlx_key_data_t keydata, void *param)
 		fractol->max_iter *= 0.9;
 	if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_ADD)
 		&& fractol->max_iter < 500)
+	{
 		fractol->max_iter *= 1.1;
+		if (fractol->max_iter >= 500)
+			fractol->max_iter = 500;
+	}
 }
 
 void	fractol_arrow(void *param)

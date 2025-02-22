@@ -6,7 +6,7 @@
 /*   By: tripham <tripham@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 02:38:55 by tripham           #+#    #+#             */
-/*   Updated: 2025/02/22 03:53:14 by tripham          ###   ########.fr       */
+/*   Updated: 2025/02/22 15:28:29 by tripham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	generate_color(t_fractol *fractol)
 		return ;
 	}
 	t = (double)fractol->iter / fractol->max_iter;
-	fractol->get.red = (int)(16 * (1 - t) * t * t * t * 255);
+	fractol->get.red = (int)(50 * (1 - t) * t * t * t * 255);
 	fractol->get.green = (int)(15 * (1 - t) * (1 - t) * t * t * 255);
 	fractol->get.blue = (int)(5 * (1 - t) * (1 - t) * (1 - t) * t * 255);
 	fractol->get.alpha = 255;
