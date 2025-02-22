@@ -6,7 +6,7 @@
 /*   By: tripham <tripham@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 21:36:56 by tripham           #+#    #+#             */
-/*   Updated: 2025/02/19 23:25:15 by tripham          ###   ########.fr       */
+/*   Updated: 2025/02/22 03:55:47 by tripham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ int						ft_toupper(int c);
 int						ft_atoi(const char *str);
 int						ft_memcmp(const void *str1, const void *str2, size_t n);
 int						ft_strncmp(const char *s1, const char *s2, size_t n);
+double					ft_atof(const char *s);
+int						ft_strcmp(const char *s1, const char *s2);
 
 t_list					*ft_lstnew(void *content);
 t_list					*ft_lstlast(t_list *lst);
@@ -80,4 +82,7 @@ void					ft_free_double_p(void **ptr);
 void					ft_free_triple_p(char ***arr);
 
 long					ft_atol(const char *str);
+void					ft_putendl_fd(char *s, int fd);
+void					ft_putstr_fd(char *s, int fd);
+
 #endif

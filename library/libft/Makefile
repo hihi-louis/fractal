@@ -36,7 +36,11 @@ SOURCES :=	ft_striteri.c	\
 			ft_is_all_white_spaces.c	\
 			ft_free_double_p.c	\
 			ft_free_triple_p.c	\
-			ft_atol.c
+			ft_atol.c	\
+			ft_atof.c	\
+			ft_strcmp.c	\
+			ft_putendl_fd.c	\
+			ft_putstr_fd.c
 
 BONUS    :=    ft_lstnew_bonus.c    \
             		ft_lstadd_front_bonus.c    \

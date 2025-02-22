@@ -6,11 +6,11 @@
 /*   By: tripham <tripham@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 00:22:17 by tripham           #+#    #+#             */
-/*   Updated: 2025/02/21 00:24:10 by tripham          ###   ########.fr       */
+/*   Updated: 2025/02/22 03:55:27 by tripham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

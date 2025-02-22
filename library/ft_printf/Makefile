@@ -21,9 +21,7 @@ SRCS := ft_printf.c	\
 		ft_putnbr.c	\
 		ft_putpointer.c	\
 		ft_putstr.c	\
-		ft_putui.c	\
-		ft_putendl_fd.c	\
-		ft_putstr_fd.c	
+		ft_putui.c	
 
 OBJ := $(SRCS:.c=.o)
 

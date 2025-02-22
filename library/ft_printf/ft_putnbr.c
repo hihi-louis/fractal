@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trietpham <trietpham@student.42.fr>        +#+  +:+       +#+        */
+/*   By: tripham <tripham@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 19:51:00 by tripham           #+#    #+#             */
-/*   Updated: 2025/02/09 12:28:09 by trietpham        ###   ########.fr       */
+/*   Updated: 2025/02/22 03:55:09 by tripham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 int	ft_putnbr(int n)
 {
@@ -30,7 +29,7 @@ int	ft_putnbr(int n)
 		len += temp;
 	}
 	if (n >= 10)
-	{	
+	{
 		temp = ft_putnbr(n / 10);
 		if (temp == -1)
 			return (-1);

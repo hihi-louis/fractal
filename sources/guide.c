@@ -6,38 +6,43 @@
 /*   By: tripham <tripham@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 00:17:49 by tripham           #+#    #+#             */
-/*   Updated: 2025/02/21 00:31:13 by tripham          ###   ########.fr       */
+/*   Updated: 2025/02/22 03:41:30 by tripham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fractol.h"
 
-void	input_guide(void)
+int	fractol_error(char *str)
 {
-	ft_putendl_fd("<=======================================================>"
-		"\n| \033[4mControl guide\033[0m\t\t\t\t\t\t|"
-		"\n| ESC		- Exit program\t\t\t\t|"
-		"\n| TAB		- Display control guide\t\t\t|"
-		"\n| ARROW KEYS	-Panning\t\t\t\t|"
-		"\n| \tUP	- Move up\t\t\t\t|"
-		"\n| \tDOWN	- Move down\t\t\t\t|"
-		"\n| \tRIGHT	- Move right\t\t\t\t|"
-		"\n| \tLEFT	- Move left\t\t\t\t|"
-		"\n| MOUSE		- Zooming\t\t\t\t|"
-		"\n| \tSCROLL_UP	- Zoom in\t\t\t|"
-		"\n| \tSCROLL_DOWN	- Zoom out\t\t\t|"
-		"\n<=======================================================>",
-		STDERR_FILENO);
+	ft_putendl_fd(str, 2);
+	return (1);
 }
 
-void	error_output(char *message_error)
+int	fractol_guide(void)
 {
-	ft_putstr_fd(" fractol: Error: ", STDERR_FILENO);
-	ft_putstr_fd(message_error, STDERR_FILENO);
-}
-int	arg_guide(char *message_error)
-{
-	error_output(message_error);
-	ft_putendl_fd("\nUsage: ./fractol [fractal_name]", STDERR_FILENO); // douple check
+	ft_putstr_fd(
+		"**************************************************\n"
+		"*            FRACT-OL USAGE GUIDE                *\n"
+		"**************************************************\n"
+		"\nAvailable fractal sets:"
+		"\n\t- mandelbrot"
+		"\n\t- julia"
+		"\n"
+		"\n\nGuide for fract-ol usage:"
+		"\n\tUsage: ./fractol [fractal_set_name]"
+		"\n\tTo create a specific Julia set:"
+		"\n\tUsage: ./fractol julia [signed_double_a] [signed_double_b]"
+		"\n\nExamples for Julia sets:"
+		"\n\t-0.4\t0.6"
+		"\n\t0.285\t0.01"
+		"\n\t0\t0.8"
+		"\n\t-1.476\t0"
+		"\n\t-0.12\t-0.77"
+		"\n\nGeneral Guide:"
+		"\n\t- ESC: Close the window and quit the program."
+		"\n\t- Arrow keys (← ↑ ↓ →): Move the view."
+		"\n\t- Scroll: Zoom in and out based on the mouse position."
+		"\n\t- Keypad + / -: Increase or decrease iterations"
+		"\n**************************************************\n", 1);
 	return (1);
 }

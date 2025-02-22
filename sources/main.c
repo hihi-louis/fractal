@@ -6,7 +6,7 @@
 /*   By: tripham <tripham@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 23:26:46 by tripham           #+#    #+#             */
-/*   Updated: 2025/02/21 04:32:13 by tripham          ###   ########.fr       */
+/*   Updated: 2025/02/22 03:41:44 by tripham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 int	main(int argc, char **argv)
 {
 	t_fractol	fractol;
-	
-	if (check_validation_arg(argc, argv))
-		return (EXIT_FAILURE);
+
+	if (argc < 2 || !check_validation_arg(argc, argv))
+		return (fractol_guide());
 	initialize_fractol(&fractol, argv);
-	rendering(&fractol);
-	input_guide();
 	mlx_key_hook(fractol.mlx, fractol_ctrl, &fractol);
-	mlx_scroll_hook(fractol.mlx, fractol_zoom, &fractol);
-	mlx_loop_hook(fractol.mlx, fractol_shift, &fractol);
+	mlx_loop_hook(fractol.mlx, fractol_arrow, &fractol);
+	mlx_loop_hook(fractol.mlx, rendering, &fractol);
+	mlx_scroll_hook(fractol.mlx, fractol_scroll, &fractol);
 	mlx_loop(fractol.mlx);
-	return (EXIT_SUCCESS);
+	mlx_terminate(fractol.mlx);
+	return (0);
 }
